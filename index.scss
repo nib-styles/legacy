@@ -1,0 +1,420 @@
+// These are styles pulled from the old inuit-based styles
+// We need to go through and update all the classes and styles
+
+@function legacy-image-url($path) {
+  @return component-url('nib-styles-legacy', "/images/#{$path}");
+}
+
+.nav-ribbon {
+  background-color: #E9E9E9;
+  color: #666;
+  border-bottom: 1px solid #CCC;
+  padding: spacing(1) 0;
+
+  & > div {
+    @include clear-floats;
+  }
+}
+
+.functional-nav {
+    float: right;
+}
+
+.functional-nav > li {
+    float: left;
+    display: inline;
+    border-right: 1px solid $border-color;
+}
+
+.functional-nav > li:last-child {
+    border-right: none;
+}
+
+.functional-nav a,
+.functional-nav a:visited, 
+.functional-nav input[type=submit] {
+    padding: 0 $spacing-small;
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.functional-nav a:hover, 
+.functional-nav input[type=submit]:hover {
+    color: #1F7C07;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.functional-nav input[type=submit] {
+    border: 0 none;
+    background: none;
+    margin: 0;
+}
+
+.logo {
+  width: 51px;
+  height: 221px;
+  background: legacy-image-url('logo.png');
+}
+
+.head-container {
+  @include clear-floats;
+  background: legacy-image-url('masthead_bg.png') no-repeat top right;
+  position: relative;
+  z-index: 2000;
+}
+
+.head-logo {
+  margin: baseline(1.5) 0;
+}
+
+.head-logo a {
+  display: block;
+  background: legacy-image-url('logo.png') no-repeat;
+  height: 51px;
+  width: 221px;
+  text-indent: -99999px;
+}
+
+.is-checkout .primary-menu {
+    display: none;
+}
+
+.is-checkout .head-container {
+    background: none;
+}
+
+
+.primary-menu {
+  font-size: 12px;
+  background: #DDD;
+  -webkit-box-shadow: inset 1px 0 0 1px #BBB;
+  -moz-box-shadow: inset 1px 0 0 1px #BBB;
+  -ms-box-shadow: inset 1px 0 0 1px #BBB;
+  box-shadow: inset 1px 0 0 1px #BBB;
+}
+
+.lt-ie9 .primary-menu {
+    background: #BBB;
+}
+
+#nav.dropdown{
+  overflow:visible;
+}
+.dropdown li{
+  position:relative;
+}
+.dropdown a{
+  display:block;
+}
+.dropdown ul{ /* Set up the dropdown and hide it off-screen. */
+  list-style:none;
+  margin:0;
+  position:absolute;
+  left:-99999px;
+  top:100%;
+  background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+  background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+}
+.dropdown li:hover ul{ /* Bring the dropdown back onto screen when you hover its parent li. */
+  left:0;
+}
+#nav.dropdown ul li{ /* Remove floats etc from dropdown list items. */
+  position:static;
+  float:none;
+}
+.dropdown ul a{
+  white-space:nowrap; /* Stop the list items breaking. */
+}
+/* End css drop down functionality */
+
+/* Style the main menu */
+ul.primary_nav2 > li {
+    font-weight: normal;
+    margin-left: 0;
+    padding: 0;
+    line-height: inherit;
+    position: relative;
+    /* * line-height: 1em;*/
+    display: block;
+    float: left;
+    border:1px solid #bbbbbb;
+    border-left:0 none;
+    background: #f9f9f9; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f9f9f9 1%, #dddddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f9f9f9), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f9f9f9 1%,#dddddd 100%);
+    background: -o-linear-gradient(top,  #f9f9f9 1%,#dddddd 100%);
+    background: -ms-linear-gradient(top,  #f9f9f9 1%,#dddddd 100%);
+    background: linear-gradient(top,  #f9f9f9 1%,#dddddd 100%);
+    height:35px;
+}
+
+ul.primary_nav2 > li a {
+    color: #444444;
+    padding: 0 15px;
+    line-height: 35px;
+    margin-right:0;
+}
+
+ul.primary_nav2 {
+  display:block;
+  list-style:none none; 
+  margin:0;
+  padding:0;
+  border:0;
+  float: left;
+  border-right: 1px solid #1F7C07;
+  position: relative;
+  z-index: 2;
+}
+
+.logged-in ul.primary_nav2 {
+    border-right: 0 none;
+}
+
+ul.primary_nav2 > li:first-child {
+  border:1px solid #bbbbbb;
+}
+
+ul.primary_nav2 > li:first-child:hover,
+ul.primary_nav2 > li:first-child:active {
+    padding-left: 1px;
+}
+
+ul.primary_nav2 > li:hover,
+ul.primary_nav2 > li:active {
+    background: none #515151;
+    border:1px solid #515151;
+    border-left:0 none;
+}
+
+ul.primary_nav2 li a.nav-more:visited,
+ul.primary_nav2 li a.nav-more:active,
+ul.primary_nav2 li a.nav-more:hover,
+ul.primary_nav2 li:hover a.nav-more,
+ul.primary_nav2 li:active a.nav-more  {
+    background-image: legacy-image-url("nav-more-hover.png");
+}
+
+ul.primary_nav2 li a.nav-more {
+    background: legacy-image-url("nav-more.png") no-repeat right 14px;
+    padding-right: 30px;
+}
+
+.primary_nav2 a
+{
+    text-decoration: none;
+    color: #444444;
+}
+
+.primary_nav2 a:hover,
+.primary_nav2 a:active,
+.primary_nav2 li:hover a,
+.primary_nav2 li:active a
+{
+    color: #EEE;
+}
+
+ul.primary_nav2 ul > li a,
+ul.primary_nav2 ul > li a:visited, 
+ul.primary_nav2 ul > li a:active,
+ul.primary_nav2 ul > li a:hover {
+    background: none;
+    color: #EEE;
+    height: auto;
+    line-height: 28px;
+    padding: 0 30px 0 15px;
+    white-space: nowrap;
+    border-right: 0 none;
+}
+
+/* Green Login Button */
+.primary-menu .login-button,
+.primary-menu .logout-button {
+    @include vertical-gradient(#79be10, #1f7c07, #1f7c07);
+    border:1px solid #1f7c07;
+    color: #eee;
+    text-align: center;
+    line-height: 35px;
+    display: block;
+    z-index: 0;
+    top: 0;
+    text-decoration: none;
+}
+
+.primary-menu form {
+  float: right;
+}
+
+.primary-menu form .logout-button {
+  height: 37px; //firefox
+  padding: 0;
+  width: 100%; // chrome, FF and safari
+}
+
+.lt-ie8 .primary-menu .login-button {
+    float: right;
+    width: 100px;
+}
+
+.primary-menu .login-button:hover,
+.primary-menu .logout-button:hover {
+    background: #176303;
+    background: -moz-linear-gradient(top,  #4a9b0b 1%, #1f7c07 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#4a9b0b), color-stop(100%,#1f7c07));
+    background: -webkit-linear-gradient(top,  #4a9b0b 1%,#1f7c07 100%);
+    background: -o-linear-gradient(top,  #4a9b0b 1%,#1f7c07 100%);
+    background: -ms-linear-gradient(top,  #4a9b0b 1%,#1f7c07 100%);
+    background: linear-gradient(top,  #4a9b0b 1%,#1f7c07 100%);
+    color: #ddd;
+}
+
+.logged-in .primary-menu .logout-button {
+    padding: 0 25px;
+}
+
+/* end login button */
+
+/* Menu States */
+
+ul.primary_nav2 li.submenu > ul > li > a:hover {
+    color:#ddd;
+    background: #313131 none;
+   }
+
+ul.primary_nav2 li > ul {
+  position: absolute;
+    top: 35px;
+    color:#eee;
+    background: #515151 none;
+}
+
+ul.primary_nav2 li.submenu > ul li {
+    margin-left: 0px;
+}
+
+ul.primary_nav2 li.submenu > ul li a {
+    padding-bottom: 2px;
+}
+
+ul.primary_nav2 li.submenu > ul {
+    list-style: none;
+    list-style-image: none;
+    min-width: 100%;
+    border-right: 1px solid #515151;
+}
+
+.primary_nav2 li {
+  margin-left:-1px;
+}
+/* End main menu style */
+
+
+.head-container .phone-number { 
+  position: absolute;
+  right: 300px;
+  top: 45px;
+}
+
+.nib-search {
+    position: absolute;
+    right: 0px;
+    top: 45px;
+}
+
+#search input {
+    border: 1px #BBB solid !important;
+    line-height: 1;
+    float: left;
+}
+
+#search input[type="text"] {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-right:0 none !important;
+    border-radius: 4px 0 0 4px;
+    color: #666666;
+    height: 22px;
+    padding: 0 spacing(1);
+    width: 200px;
+    font-size: 12px;
+}
+
+#search input[type="submit"] {
+    background: #DDD;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#F9F9F9), color-stop(100%,#DDD));
+    -moz-border-radius: 0 4px 4px 0;
+    -webkit-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    -moz-box-shadow: 1px 1px 0 #FFFFFF inset;
+    -webkit-box-shadow: 1px 1px 0 white inset;
+    box-shadow: 1px 1px 0 white inset;
+    color: #444;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    height: 24px;
+    padding: 2px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 white;
+    width: 60px !important;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.mobileHeader {
+    background: #1F7C07;
+    background-image: -moz-linear-gradient(top,#79BE10,#1F7C07);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #79BE10), color-stop(1, #1F7C07));
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    height: 49px;
+}
+
+.mobileHeader h1 {
+    text-align: left;
+    margin: 0!important; /* <--- WHY IS THIS HERE??? */
+    padding-top: 14px;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.mobileHeader img {
+    float: left;
+    padding-left: 4px;
+    padding-right: 10px;
+}
+
+.mobileFooter {
+    background: black legacy-image-url('button_bar_bg.png') repeat-x;
+    overflow: hidden;
+}
+
+.mobileFooter div {
+    text-align: center;
+}
+
+.mobileFooter a {
+    display: inline-block;
+    height: 46px;
+    width: 46px;
+    margin-top: 3px;
+}
+
+.mobileFooter .callNib {
+    background-image: legacy-image-url('button_call_nib.png');
+}
+
+.mobileFooter .emailNib {
+    background-image: legacy-image-url('button_email_nib.png');
+}
+
+.mobileFooter .callMe {
+    background-image: legacy-image-url('button_call_me.png');
+}
+
+.mobileFooter .disclaimerButton {
+    background-image: legacy-image-url('button_info.png');
+}

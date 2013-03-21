@@ -1,0 +1,19 @@
+{
+  "name": "legacy",
+  "main": "index.scss",
+  "version": "0.1.0",
+  "dependencies": {},
+  "styles": [
+    "index.scss"
+  ],
+  "files": [
+    "images/button_call_me.png",
+    "images/button_call_nib.png",
+    "images/button_email_nib.png",
+    "images/button_info.png",
+    "images/logo.png",
+    "images/masthead_bg.png",
+    "images/nav-more-hover.png",
+    "images/nav-more.png"
+  ]
+}
