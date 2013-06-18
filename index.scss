@@ -31,7 +31,7 @@
 }
 
 .functional-nav a,
-.functional-nav a:visited, 
+.functional-nav a:visited,
 .functional-nav input[type=submit] {
     padding: 0 $spacing-small;
     color: #666;
@@ -39,7 +39,7 @@
     text-decoration: none;
 }
 
-.functional-nav a:hover, 
+.functional-nav a:hover,
 .functional-nav input[type=submit]:hover {
     color: #1F7C07;
     text-decoration: underline;
@@ -160,7 +160,7 @@ ul.primary_nav2 > li a {
 
 ul.primary_nav2 {
   display:block;
-  list-style:none none; 
+  list-style:none none;
   margin:0;
   padding:0;
   border:0;
@@ -218,7 +218,7 @@ ul.primary_nav2 li a.nav-more {
 }
 
 ul.primary_nav2 ul > li a,
-ul.primary_nav2 ul > li a:visited, 
+ul.primary_nav2 ul > li a:visited,
 ul.primary_nav2 ul > li a:active,
 ul.primary_nav2 ul > li a:hover {
     background: none;
@@ -272,7 +272,7 @@ ul.primary_nav2 ul > li a:hover {
 }
 
 .logged-in .primary-menu .logout-button {
-    padding: 0 25px;
+    padding: 0 24px 0 23px;
 }
 
 /* end login button */
@@ -312,7 +312,7 @@ ul.primary_nav2 li.submenu > ul {
 /* End main menu style */
 
 
-.head-container .phone-number { 
+.head-container .phone-number {
   position: absolute;
   right: 300px;
   top: 45px;
