@@ -1,10 +1,8 @@
 {
   "name": "legacy",
-  "main": "index.scss",
-  "version": "0.1.0",
-  "dependencies": {},
+  "version": "0.2.0",
   "styles": [
-    "index.scss"
+    "index.css"
   ],
   "files": [
     "images/button_call_me.png",
