@@ -203,7 +203,8 @@ ul.primary_nav2 li:active a.nav-more {
 
 ul.primary_nav2 li a.nav-more {
   background: legacy-image-url("nav-more.png") no-repeat right 14px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  width: 100%; }
 
 .primary_nav2 a {
   text-decoration: none;
